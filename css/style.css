@@ -40,6 +40,7 @@ dd {
 /* Выставляем основные настройки по-умолчанию для body */
 
 body {
+    background: #FAFAFA;
     height: 100%;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
@@ -66,19 +67,7 @@ a:not([class]) {
 }
 
 
-/* Упрощаем работу с изображениями */
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-
 /* Указываем понятную периодичность в потоке данных у article*/
-
-article>*+* {
-    margin-top: 1em;
-}
 
 
 /* Наследуем шрифты для инпутов и кнопок */
@@ -204,6 +193,37 @@ select {
 @media (max-width: 479px) {
     .menu__link {
         font-size: 18px;
+    }
+}
+
+
+/*------------Header-title and subtitle---------*/
+
+.header-block {
+    text-align: center;
+    line-height: 142%;
+}
+
+.header-block__title {
+    font-weight: 700;
+    font-size: 40px;
+    color: #252B42;
+    line-height: 142%;
+}
+
+.header-block__title:not(:last-child) {
+    margin: 0 0 10px 0;
+}
+
+.header-block__sub-title {
+    color: #737373;
+    line-height: 142%;
+    font-weight: 500;
+}
+
+@media(max-width:1024px) {
+    .header-block__title {
+        font-size: 30px;
     }
 }
 
@@ -369,7 +389,7 @@ footer {
     .services__body {
         flex-wrap: wrap;
         display: flex;
-        margin: 0 -15px -30px;
+        margin: 0 -15px 30px;
     }
 }
 
@@ -447,28 +467,180 @@ footer {
     line-height: 143%;
 }
 
+
+/*_--------------------ADVANTAGES---------------*/
+
 .page__advantages {}
 
-.advantages {}
+.advantages {
+    padding: 80px 0;
+}
+
+@media(max-width:1024px) {
+    .advantages {
+        padding: 50px 0;
+    }
+}
 
 .advantages__container {}
 
-.advantages__header {}
+.advantages__header {
+    margin: 0 0 50px 0;
+}
 
-.header-block {}
+@media(max-width:767px) {
+    .advantages__header {
+        margin: 0 0 25px 0;
+    }
+}
 
-.header-block__title {}
+.advantages__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px -30px;
+}
 
-.header-block__sub-title {}
+.advantages__column {
+    padding: 0px 15px;
+    flex: 0 1 25%;
+    height: 100%;
+}
 
-.advantages__body {}
+.advantages__column:not(:last-child) {
+    margin: 0 0 30px 0;
+}
 
-.advantages__column {}
+@media(max-width:1024px) {
+    .advantages__column {
+        flex: 0 1 50%;
+    }
+}
 
-.advantages__item {}
+@media(max-width:560px) {
+    .advantages__column {
+        flex: 0 1 100%;
+    }
+}
 
-.advantages__column__icon {}
+.advantages__item {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    height: 100%;
+}
 
-.advantages__column__value {}
+.advantages__item>*:not(:last-child) {
+    margin: 0 0 10px 0;
+}
 
-.advantages__column__text {}
+.advantages__column__icon {
+    height: 48px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.advantages__column__value {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 142%;
+    color: #252B42;
+}
+
+.advantages__column__text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.1px;
+    color: #737373;
+}
+
+
+/*---------PRACTICE-------------*/
+
+.page__practice {}
+
+.practice {
+    padding: 80px 0;
+}
+
+@media(max-width:1024px) {
+    .practice {
+        padding: 50px 0;
+    }
+}
+
+.practice__container {}
+
+.practice__header {
+    margin: 45px 0;
+}
+
+.practice__body {
+    margin: 0 -20px -30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.practice__column {
+    padding: 0 20px;
+    margin: 0 0 30px 0;
+    flex: 0 1 25%;
+}
+
+@media(max-width:1024px) {
+    .practice__column {
+        padding: 0 20px;
+        flex: 0 1 50%;
+    }
+}
+
+@media(max-width:767px) {
+    .practice__column {
+        padding: 0 20px;
+        flex: 0 1 100%;
+    }
+}
+
+.practice__item {}
+
+.item-practice {
+    background-color: #fff;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.item-practice__content {
+    padding: 30px;
+    flex: 1 1 auto;
+}
+
+.item-practice__link {
+    color: inherit;
+    display: inline-block;
+}
+
+.item-practice__link:hover {
+    text-decoration: underline;
+}
+
+.item-practice__link:not(:last-child) {
+    margin: 0 0 15px 0;
+}
+
+.item-practice__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #252B42;
+}
+
+.item-practice__text {
+    color: #737373;
+    line-height: 142%;
+}
+
+.item-practice__image {
+    display: block;
+}
