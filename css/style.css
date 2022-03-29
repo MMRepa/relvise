@@ -939,6 +939,7 @@ footer {
 .page__getintouch {}
 
 .getintouch {
+    background-color: #F3F3F3;
     padding: 80px 0 135px 0;
 }
 
@@ -1076,3 +1077,149 @@ footer {
     color: #fff;
     border: 1px solid #FF7B47;
 }
+
+
+/*---------------------Contact button--------------------------*/
+
+.page__contact {}
+
+.contact {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.contact__container {}
+
+.contact__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media(max-width:910px) {
+    .contact__body {
+        flex-direction: column;
+    }
+}
+
+.contact__content {
+    flex: 1 1 50%;
+    margin: 0 20px 0 0;
+}
+
+.contact__title {
+    color: #252B42;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 133%;
+    letter-spacing: 0.1px;
+}
+
+.contact__title:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.contact__text {
+    color: #737373;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.2px;
+}
+
+.contact__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 15px 40px;
+    margin: 0 36.5px;
+    min-height: 58px;
+    background: #FF7B47;
+    border-radius: 5px;
+    color: #fff;
+    transition: 200ms;
+}
+
+.contact__button:hover {
+    background: #fff;
+    color: #FF7B47;
+}
+
+@media(max-width:910px) {
+    .contact__content {
+        flex-: 1 1 100%;
+    }
+    .contact__button {
+        margin: 20px 0 0 0;
+    }
+}
+
+
+/*------------FOOTER-------------------*/
+
+.footer {}
+
+.footer__top {
+    background-color: #17213C;
+    padding: 50px 0;
+}
+
+.footer__main {}
+
+.footer__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer__column {
+    flex: 1 1 20%;
+}
+
+.footer__column:not(:last-child) {
+    margin: 0 30px 0 0;
+}
+
+.column-footer__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+}
+
+.column-footer__title:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.column-footer__list {
+    list-style: none;
+}
+
+.list-footer__element {
+    color: #FFFFFF;
+}
+
+._socials {
+    display: flex;
+}
+
+.list-footer__element a {
+    color: #FFFFFF;
+}
+
+.list-footer__element:not(:last-child) {
+    margin: 0 0 10px 0;
+}
+
+.footer__bottom {
+    background-color: #FAFAFA;
+}
+
+.footer__container {}
+
+.bottom-footer__text {}
+
+.bottom-footer__socials {}
